@@ -2,9 +2,7 @@
 @import url("fontawesome-all.min.css");
 
 /*
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	timeline css
 */
 
 html, body, div, span, applet, object,
@@ -84,7 +82,7 @@ input, select, textarea {
 
 	body {
 		background: #f0f4f4;
-		color: #272222;
+		color: #ffffff;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -2745,6 +2743,7 @@ input, select, textarea {
 	width: 100vw;
   }
   #github,
+  #email,
   #linkedin {
 	font-size: 8em;
 	background-color: #18191f;
@@ -2760,10 +2759,10 @@ input, select, textarea {
 	text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
 	  0 0 200px #0072ff;
   }
-  #twitter {
+  #email {
 	animation-delay: 0.3s;
   }
-  #facebook {
+  #linkedin {
 	animation-delay: 0.7s;
   }
   #github {
