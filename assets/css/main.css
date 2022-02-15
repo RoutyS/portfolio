@@ -74,6 +74,10 @@ input, select, textarea {
 	appearance: none;
 }
 
+.p.stage {
+	color:rgba(72, 57, 73, 0.5);
+}
+
 /* Basic */
 
 	html {
@@ -86,7 +90,7 @@ input, select, textarea {
 
 	body {
 		background: #f0f4f4;
-		color: #ffffff;
+		color: #1a1a1a;
 		font-size: 15pt;
 		line-height: 1.85em;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -111,6 +115,8 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 300;
 	}
+
+	
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 400;
@@ -3364,5 +3370,101 @@ input, select, textarea {
 	}
 
 
+/* pour la page d'acceuil */
+/* about me  */
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+  }
+.rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+  }
+  
+  :root {
+	--card-height: 60vh;
+	--card-width: 150vh;
+	
+	
+  }
+  
+  
+  body {
+	min-height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 2rem;
+	box-sizing: border-box;
+  }
+  
+  
+  .card {
+	 /* mettre image   */
+	background: #191c29;
+	width: var(--card-width);
+	height: var(--card-height);
+	padding: 3px;
+	position:relative;
+	border-radius: 6px;
+	align-items: center;
+	text-align: center;
+	font-size: 1.5em;
+	color: rgb(88 199 250 / 0%);
+	cursor: pointer;
+	margin-left: auto;
+    margin-right: auto;
+    
+	
+	
+  }
+  
+  .card::before {
+	content: "";
+	width: 104%;
+	height: 106%;
+	border-radius: 8px;
+	background-image: linear-gradient(
+	  var(--rotate)
+	  , #5ddcff, #3c67e3 43%, #4e00c2);
+	  position: absolute;
+	  z-index: -1;
+	  top: -1%;
+	  left: -2%;
+	  animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+	position: absolute;
+	content: "";
+	top: calc(var(--card-height) / 6);
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	transform: scale(0.8);
+	filter: blur(calc(var(--card-height) / 6));
+	background-image: linear-gradient(
+	  var(--rotate)
+	  , #5ddcff, #3c67e3 43%, #4e00c2);
+	  opacity: 1;
+	transition: opacity .5s;
+	animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% {
+	  --rotate: 0deg;
+	}
+	100% {
+	  --rotate: 360deg;
+	}
+  }
+  
+
+  
 
 
