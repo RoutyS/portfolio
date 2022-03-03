@@ -6,7 +6,7 @@ $light-primary: #282f5c;
 $text: #0c0c0c;
 $primary-text: #212121;
 $secondary-text: #221414;
-$accent: #7270f8;
+$accent: #7493f8;
 
 
 section {
@@ -19,9 +19,10 @@ html, body {
 
 body {
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  background-color: #eee;
+  background: linear-gradient(rgb(185, 212, 243),rgb(118, 139, 231),rgb(212, 173, 238));
+  
 }
 
 .h1 {
@@ -102,10 +103,11 @@ body {
 .timeline-content {
 	position: relative;
 	width: 45%;
-	padding: 10px 30px;
+	padding: 6px 20px;
 	border-radius: 4px;
 	background: #f5f5f5;
 	box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+	margin:30px;
 
 	&::after {
 		content: '';
@@ -205,6 +207,7 @@ blockquote {
 	color: $secondary-text;
 	border-left-color: $primary;
 	padding: 0 20px;
+	margin:10px;
 }
 
 .date {
@@ -270,5 +273,3 @@ blockquote {
 }
 
 
-
-//fin du css de la timeline

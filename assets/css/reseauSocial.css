@@ -1,0 +1,160 @@
+/* reseau social
+		____________________________ */
+
+		/* reseau*/
+		.container {
+			height: 100vh;
+			width: 100vw;
+			background: #18191f;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width: 100vw;
+		}
+			#github,
+			#email,
+			#linkedin {
+				font-size: 5em;
+				background-color: #18191f;
+				color: #fff;
+				box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+				2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+				inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+				inset 2px 2px 10px #00000080;
+				border-radius: 29px;
+				padding: 11px 19px;
+				margin: 0 40px;
+				animation: animate 3s linear infinite;
+				text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+				0 0 200px #0072ff;
+				top: 90px;
+			}
+			#email {
+				animation-delay: 0.3s;
+				position: relative;
+				top: 90px;
+			}
+			#linkedin {
+				animation-delay: 0.7s;
+				position: relative;
+				top: 90px;
+			}
+			#github {
+				animation-delay: 0.1s;
+				position: relative;
+				top: 90px;
+				
+			}
+			
+			@keyframes animate {
+				from {
+				filter: hue-rotate(0deg);
+				}
+				to {
+				filter: hue-rotate(360deg);
+				}
+			}
+
+	/* about me  */
+
+    @property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+  }
+.rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+  }
+  
+  :root {
+	--card-height: 80vh;
+    --card-width: 140vh;
+	
+	
+  }
+  
+  
+  /*body {
+	min-height: 100vh;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 2rem;
+	box-sizing: border-box;
+  }*/
+  
+  
+  .card {
+	 /* mettre image   */
+	background: #ffffff;
+	width: var(--card-width);
+	height: var(--card-height);
+	padding: 3px;
+	position: relative;
+	border-radius: 6px;
+	align-items: center;
+	text-align: center;
+	font-size: 1.5em;
+	color: rgb(88 199 250 / 0%);
+	cursor: pointer;
+	margin-left: auto;
+    margin-right: auto;
+	position: relative;
+	top: 40px;
+    
+	
+	
+  }
+  
+  .card::before {
+	content: "";
+	width: 104%;
+	height: 106%;
+	border-radius: 8px;
+	background-image: linear-gradient(
+	  var(--rotate)
+	  , #5ddcff, #3c67e3 43%, #4e00c2);
+	  position: absolute;
+	  z-index: -1;
+	  top: -1%;
+	  left: -2%;
+	  animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+	position: absolute;
+	content: "";
+	top: calc(var(--card-height) / 6);
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	transform: scale(0.8);
+	filter: blur(calc(var(--card-height) / 6));
+	background-image: linear-gradient(
+	  var(--rotate)
+	  , #5ddcff, #3c67e3 43%, #4e00c2);
+	  opacity: 1;
+	transition: opacity .5s;
+	animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% {
+	  --rotate: 0deg;
+	}
+	100% {
+	  --rotate: 360deg;
+	}
+  }
+  a.presentation {
+	color: #212534;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin-top: 2rem;
+  }

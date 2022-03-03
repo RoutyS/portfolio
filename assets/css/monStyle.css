@@ -2,8 +2,6 @@
     text-align: center;
 }
 
-#main{
-    display: flex !important;
+.text-bar{
+    text-align: left;
 }
-
-

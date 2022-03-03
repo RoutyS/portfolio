@@ -1,19 +1,25 @@
 <!DOCTYPE HTML>
 <!--
-	page projet 
+	page stage 
 -->
 <html>
 	<head>
-		<title>projet</title>
+		<title>Projets</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<noscript><link rel="stylesheet" href="assets/css/monStyle.css" /></noscript>
-		<link rel="stylesheet" href="assets/css/monMain.css">
+        <noscript><link rel="stylesheet" href="assets/css/monMain.css" /></noscript>
+        <link rel="stylesheet" href="assets/css/projet.css"/>
+        <!-- Bootstrap for modal -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+        <style>
+            a{text-decoration: none; color: black;}
+        </style>
 	</head>
-	<body class="projet is-preload">
+	<body>
 		<!--barHome-->
 		<div id="page-wrapper">
 
@@ -31,7 +37,7 @@
 						<nav id="nav">
 							<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="newTimeline.html">Mon Parcours</a></li>
+							<li><a href="timeline.html">Mon Parcours</a></li>
 							<!-- <li><a href="stage.html">Professionnel</a></li>  -->
 							<li>
 								<a href="#">Professionnel</a>
@@ -41,80 +47,262 @@
 								</ul>
 							</li>
 							<li><a href="projet.html">Projet</a></li>
-							
+						
 							</ul>
 						</nav>
 
 				</div>
 
+                <!-- Modal (petites fenetres) -->
+
+                        <!-- La fleur -->
+        <div class="modal fade" id="ModalLafleur" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- mettre une image avec ecrit projet 1er annee de bts sio  -->
+                    <h1 id="context">Context</h1>
+                    
+                    <p>Un fleuriste souhaiterais un site web pour la vente en ligne de ses fleurs. Elle comporte deux champs.</p>
+                    <p>Seul un Admin est capable de créer de nouveaux utilisateurs.</p>
+
+                    <h1 id="Fonctionnalité">Fonctionnalité expression de besoin</h1>
+                    <h4>Le client peut:</h4>
+                    <p> 
+                        • lister / regarder<br>
+                        • rechercher<br>
+                        • mettre des fleurs dans le panier<br>
+                        • commander / acheter<br>
+                        • annuler sa commande<br>
+                        • créer un compte<br>
+                        • se connecter<br>
+                    </p>
+                   
+                    <h4>Responsable boutique / administrateur peut:</h4>
+                    <p> rechercher<br>
+                        • lister<br>
+                        • se connecter<br>
+                        • gerer les clients<br>
+                        • gerer les fleurs<br>
+                        • ajouter<br>
+                        • modifier<br>
+                        • supprimer<br>
+                    </p>
+
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ModalGSBJava" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- mettre une image avec ecrit projet 2eme annee de bts sio  -->
+                    <h1 id="context">Context</h1>
+                    <p>Après deux années de réorganisations internes, tant au niveau du personnel que du fonctionnement administratif, l'entreprise GSB souhaite moderniser l'activité de visite médicale.</p>
+                     
+                    <h1 id="Fonctionnalité">Fonctionnalité expression de besoin</h1>
+                     <h4>Fonctionnalité: Gestion des medicaments</h4>
+                      <p>le client doit pouvoir:<br>
+                        • Insérer, modifier, lister des types d’individus<br>
+                        • Insérer, modifier, lister des médicaments<br>
+                        • Insérer une prescription (pour un médicament, un type d’individu, un dosage)<br>
+                        • Créer pour un médicament, la liste des médicaments non conseillés.<br>
+                        • Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, …).<br>
+                      </p>
+                      
+                      <h1 id="authentification">Authentification</h1>
+
+                      <p>La page d’authentification comporte deux champs : <br>
+                        ○ Nom d’utilisateur.<br>
+                        ○ Mot de passe  en *. <br>
+                        Seule l’admin peut crée un compte.<br>
+                      </p>
+                      <img class="img-auth" src="images/JAVAauthentification.jpeg">
+
+                      <h1 id="menu-principal">Menu principal</h1>
+                      <p>Vous avez 3 choix possible:<br> 
+                        Liste , Ajout , Dashboard.<br>
+                        Il y’a un bouton pour se déconnecter également un bouton home pour revenir au menu principal (cette page).
+                      </p>
+                        <img class="img-menup" src="images/JAVAmenu.jpeg">
+
+                        <h3>Liste</h3>
+                        <p> 
+                            ○ soit on liste les medicament.<br>
+                            ○ soit le type de personne.<br>
+                            il y'a une bar de recherche pour trouver un medicament on insere le nom dans le champs
+                            “entrer le nom d’un medicament” et on clique sur ‘rechercher’ ellle se trouve egalement pour le type-personne.<br>
+                            pour lister les pertubateurs on double clique sur le medicament et s’affiche sur le label.<br>
+                        </p>
+                        <img class="img-liste" src="images/JAVAlister.jpeg">
+                        <p>
+                            pour la modification il faut cliquer sur  le crayon<br>
+                        </p>
+                        <img class="img-liste-modifier" src="images/JAVAmodif.jpeg">
+
+                        <h3>Ajout</h3>
+                        <p>
+                           il y'a plusieurs choix:<br>
+                           •medicament<br>
+                           <img class="img-ajout-med" src="images/JAVAajoutmed.jpeg"><br>
+                           •interdiction<br>
+                           <img class="img-ajout-int" src="images/JAVAajoutinter.jpeg"><br>
+                           •prescription<br>
+                           <img class="img-ajout-pres" src="images/JAVAajoutpres.jpeg"><br>
+                           •type de personne<br>
+                           <img class="img-ajout-tp" src="images/JAVAajouttypep.jpeg"><br>
+
+                        </p>
+                        
+                        <h3>Dashboard</h3>
+                        <p>
+
+                           •graphique 1<br>
+                           <img class="img-dashboard-1" src="images/JAVAgraph1.jpeg"><br>
+                           •graphique 2<br>
+                           <img class="img-dashboard-2" src="images/JAVAgraph2.jpeg"><br>
+                           •graphique 3<br>
+                           <img class="img-dashboard-3" src="images/JAVAgraph3.jpeg"><br>
+                           •graphique 4<br>
+                           <img class="img-dashboard-4" src="images/JAVAgraph4.jpeg"><br>
+
+                        </p>
+                        <!-- <img class="img-dasboard" src=""> -->
+
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ModalGSBSymfony" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                   <!-- mettre une image avec ecrit projet 2 eme annee de bts sio  -->
+                    <h1 id="context">Context</h1>
+                    <p>Après deux années de réorganisations internes, tant au niveau du personnel que du fonctionnement administratif, l'entreprise GSB souhaite moderniser l'activité de visite médicale.</p>
+                  
+                       
+                    <h1 id="Fonctionnalité">Fonctionnalité expression de besoin</h1>
+                     <h4>Fonctionnalité: Gestion des praticiens</h4>
+                      <p>le client doit pouvoir:<br>
+                        • Insérer, modifier, lister des spécialités<br>
+                        • Insérer, modifier, lister pour un praticien la liste de ses spécialités<br>
+                        • Insérer dans quelle(s) activité(s) complémentaire(s) (colloques, séminaires, …) a été invité un praticien.<br>
+                        • Avoir des statistiques sous forme d’indicateurs (nombres, pourcentages, …).<br>
+                      </p>
+
+                    <h1 id="authentification">Authentification</h1>
+                        <hr>
+                        <p>La page d’authentification est simple d’utilisation. Elle comporte deux champs.</p>
+                        <p>Seul un Admin est capable de créer de nouveaux utilisateurs.</p>
+                        <div class="double-image">
+                            <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb1.png">
+                            <div>
+                                <p>L’affichage / cache du mot de passe</p>
+                                <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb2.png">
+                                <p>Le bouton de connexion qui permet d’accéder au menu principal.</p>
+                                <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb3.png">
+                            </div>
+                        </div>
+                    <h1 id="menu-principal">Menu principal</h1>
+                        <hr>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb4.png">
+                    <h2 id="les-listes">Les listes</h2>
+                        <p>Deux listes sont disponibles au chargement de la page. Elles permettent de :</p>
+                    <h3 id="lister-les-types-d-individus">Lister les types d’individus</h3>
+                    <div class="double-image">
+                        <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb5.png">
+                        <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb6.png">
+                    </div>
+                    <h3 id="lister-les-m-dicaments">Lister les médicaments</h3>
+                    <div class="double-image">
+                        <img class="img-illu" src="../../images/pres_portfolio/GSBJava/gsb7.png">
+                    </div>
+                    <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb8.png">
+                    <h2 id="les-graphiques">Les graphiques</h2>
+                    
+                        <aside>
+                        ⚠️ A remplir
+                        </aside>
+
+                    <h2 id="les-ajouts">Les ajouts</h2>
+                        <h3 id="ajouter-un-type-d-individu">Ajouter un type d’individu</h3>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb9.png">
+                    <h3 id="ajouter-un-m-dicament">Ajouter un médicament</h3>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb10.png">
+                    <h3 id="ajout-prescription">Ajout prescription</h3>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb11.png">
+                    <h3 id="ajout-interaction">Ajout interaction</h3>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb12.png">
+                    <h2 id="fermer-la-session">Fermer la session</h2>
+                        <img class="img-pres" src="../../images/pres_portfolio/GSBJava/gsb13.png">
+
+                </div>
+            </div>
+            </div>
+        </div>
+
 			<!-- Main -->
+            <section class="projet"></section>
+
+            <!-- <div class="testprojet"> -->
+                <section class="projet is-preload"></section>
+			
 				<div class="wrapper style1">
 
-					<!-- <div class="container"> -->
-						<div class="row gtr-200">
-							<div class="col-8 col-12-mobile" id="content">
-								<article classe="center" id="main">
+                    <div class="content-projets">
+                        <!-- Projet lafleur -->
+                        <figure class="snip1573" data-bs-toggle="modal" data-bs-target="#ModalLafleur">
+                            <img src="images/boostrap.png"/>
+                            <figcaption>
+                            <h3>LAFLEUR 2020-2021</h3>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                        <!-- Projet GSB - JAVA -->
+                        <figure class="snip1573" data-bs-toggle="modal" data-bs-target="#ModalGSBJava">
+							<img src="images/logo_java.jpg"/>
+                            <figcaption>
+                            <h3>JAVA 2021-2022</h3>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                        <!-- Projet GSB - Symfony -->
+                        <figure class="snip1573" data-bs-toggle="modal" data-bs-target="#ModalGSBSymfony">
+							<img src="images/symfony.png"/>
+                            <figcaption>
+                            <h3>SYMFONY 2021-2022</h3>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
 
-									<h1 class="main-title">Mes projets</h1>
-									
-									  <div class="content">
-										<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-										  <div class="content-overlay"></div>
-										  <img class="content-image" src="images/logo_java.jpg">
-										  <div class="content-details fadeIn-left">
-											<h3>JAVA</h3>
-											<p>projet 2021-2022</p>
-										  </div>
-										</a>
-									  </div>
-									
-									  <div class="content">
-										<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-										  <div class="content-overlay"></div>
-										  <img class="content-image" src="images/symfony.png">
-										  <div class="content-details fadeIn-top">
-											<h3>Symfony</h3>
-											<p>projet 2021-2022</p>
-										  </div>
-										</a>
-									  </div>
-									
-									  <div class="content">
-										<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-										  <div class="content-overlay"></div>
-										  <img class="content-image" src="images/laFleur.jpg">
-										  <div class="content-details fadeIn-right">
-											<h3>laFleur</h3>
-											<p>projet 2020-2021</p>
-										  </div>
-										</a>
-									  </div>
-									
-									  <div class="content">
-										<a href="https://unsplash.com/photos/HkTMcmlMOUQ" target="_blank">
-										  <div class="content-overlay"></div>
-										  <img class="content-image" src="images/glpi.png">
-										  <div class="content-details fadeIn-bottom">
-											<h3 class="content-title">GLPI</h3>
-											<p class="content-text">projet 2021-2022</p>
-										  </div>
-										</a>
-									  </div>
-							
 
-								</article>
-							</div>
-							
-						</div>
-					
+                    </div>
 
-				</div>
+           <!-- </div> -->
 
-			
+        </div>
 
-		</div>
-
-		<!-- Scripts -->
+    </section>
+        
+        <!-- Scripts JS -->
+        <script src="assets/js/projet.js"></script> 
+        <!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -123,6 +311,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <!-- JavaScript Bootsrap for modal -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
 
 	</body>
 </html>
+
+
+
