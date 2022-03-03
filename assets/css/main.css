@@ -3136,3 +3136,8 @@ input, select, textarea {
 					}
 
 	}
+
+	::selection{
+		background-color: rgba(81, 123, 187, 0.568);
+		color: rgb(255, 255, 255);
+	}
